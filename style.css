@@ -2,4 +2,11 @@ header {
   position: fixed;
   z-index: 2;
   color: #466995;
+  background-color: "Black";
+  color: "White";
+}
+
+p {
+  position: relative;
+  background-color: "LavenderBlush";
 }
