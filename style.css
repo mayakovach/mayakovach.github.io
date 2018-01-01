@@ -27,20 +27,20 @@ li a {
 }
 /*Hover state for top level links*/
 li:hover a {
-    background: "LavenderBlush";
-    color: "Black";
+    background: LavenderBlush;
+    color: Black;
 }
 /*Style for dropdown links*/
 li:hover ul a {
-    background: "LavenderBlush";
-    color: "Black";
+    background: LavenderBlush;
+    color: Black;
     height: 40px;
     line-height: 40px;
 }
 /*Hover state for dropdown links*/
 li:hover ul a:hover {
     background: #000000;
-    color: #"LavenderBlush";
+    color: LavenderBlush;
 }
 
 /*Hide dropdown links until they are needed*/
@@ -66,5 +66,5 @@ ul li a:hover + .hidden, .hidden:hover {
 
 p {
   position: relative;
-  background-color: "LavenderBlush";
+  background-color: LavenderBlush;
 }
