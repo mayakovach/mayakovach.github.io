@@ -1,70 +1,90 @@
-/*Strip the ul of padding and list styling*/
-ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    position: absolute;
+body {
+    background: LavenderBlush;
 }
-/*Create a horizontal list with spacing*/
-li {
-    display:inline-block;
-    float: left;
-    margin-right: 1px;
-}
-
-/*Style for menu links*/
-li a {
+ 
+.clearfix:after {
     display:block;
-    min-width:160px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    font-family: "Arial Narrow";
-    color: #fff;
-    background: #000000;
-    text-transform: uppercase;
+    clear:both;
+}
+ 
+/*----- Menu Outline -----*/
+.menu-wrap {
+    width:100%;
+    background:#3e3436;
+}
+ 
+.menu {
+    width:1000px;
+    margin:0px auto;
     text-decoration: none;
 }
-/*Hover state for top level links*/
-li:hover a {
-    background: LavenderBlush;
-    color: Black;
+ 
+.menu li {
+    margin:0px;
+    list-style:none;
+    font-family:"Arial Narrow";
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
 }
-/*Style for dropdown links*/
-li:hover ul a {
-    background: LavenderBlush;
-    color: Black;
-    height: 40px;
-    line-height: 40px;
+ 
+.menu a {
+    transition:all linear 0.15s;
+    color:#919191;
+    text-decoration: none;
 }
-/*Hover state for dropdown links*/
-li:hover ul a:hover {
-    background: #000000;
+ 
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
     color: LavenderBlush;
 }
-
-/*Hide dropdown links until they are needed*/
-li ul {
-    display: none;
+ 
+/*----- Top Level -----*/
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+    font-size:16px;
 }
-/*Make dropdown links vertical*/
-li ul li {
-    display: block;
-    float: none;
+ 
+.menu > ul > li > a {
+    padding:10px 40px;
+    display:inline-block;
 }
-/*Prevent text wrapping*/
-li ul li a {
-    width: auto;
-    min-width: 100px;
-    padding: 0 20px;
+ 
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    background:#2e2728;
 }
-/*Display the dropdown on hover*/
-ul li a:hover + .hidden, .hidden:hover {
-    display: block;
+ 
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
 }
-
-
-p {
-  position: relative;
-  background-color: LavenderBlush;
+ 
+.sub-menu {
+    width:160%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#2e2728;
+}
+ 
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+ 
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background:#3e3436;
 }
